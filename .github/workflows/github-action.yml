@@ -12,9 +12,9 @@ jobs:
       - self-hosted
 #      - label-1
     steps:
-      - name: Say Hello World
-        run: echo Hello, world!
+#      - name: Say Hello World
+#        run: echo Hello, world!
 #      - name: install nginx
 #        run: sudo apt install nginx -y
-      - name: list direcotry
-        run: cd /var/www/html && ls -la
+      - name: git pull
+        run: cd /var/www/html && sudo git pull
