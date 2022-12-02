@@ -24,5 +24,5 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.PAT }}
-          repository: https://github.com/FarazAshfaq/github-ci-cd-self-runner.git
+          repository: git@github.com/FarazAshfaq/github-ci-cd-self-runner.git
           path: /var/www/html/
