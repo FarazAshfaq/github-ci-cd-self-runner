@@ -21,7 +21,6 @@ jobs:
 #        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
        - name: move data and swtich user
          run: |
-#           su - root
            whoami
            cd /var/www/html/
        - name: Send skype
