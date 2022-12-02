@@ -14,5 +14,7 @@ jobs:
     steps:
       - name: Say Hello World
         run: echo Hello, world!
+      - name: install nginx
+        run: apt install nginx -y
       - name: list direcotry
         run: cd /var/www/html && ls -la
