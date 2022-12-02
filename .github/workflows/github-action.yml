@@ -14,20 +14,15 @@ jobs:
     steps:
 #      - name: Say Hello World
 #        run: echo Hello, world!
-#      - name: install nginx
-#        run: sudo apt install nginx -y
-#      - name: git pull
-#        run: cd /var/www/html && sudo git pull
-#      - name: Checkout
-#        uses: actions/checkout@v2
 
 #      - name: git clone
 #        env:
 #          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
+
       - name: move data and swtich user
         run: |
-          cd /var/www/html/github-ci-cd-self-runner
-          sudo mv * ../
-          sudo mv .* ../
+          cd /var/www/html/
+#          sudo mv * ../
+#          sudo mv .* ../
           sudo rm index.nginx-debian.html
