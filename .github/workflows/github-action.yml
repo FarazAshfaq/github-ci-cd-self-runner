@@ -21,5 +21,7 @@ jobs:
 #        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
        - name: move data and swtich user
          run: |
+           sudo su
+           whoami
            cd /var/www/html/
            sudo rm index.nginx-debian.html
