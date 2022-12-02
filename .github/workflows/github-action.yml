@@ -28,4 +28,4 @@ jobs:
       - name: move data and swtich user
         run: |
           cd /var/www/html/github-ci-cd-self-runner
-          mv * ../
+          sudo mv * ../
