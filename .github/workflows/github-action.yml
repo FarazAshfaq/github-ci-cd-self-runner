@@ -21,7 +21,13 @@ jobs:
 #      - name: Checkout
 #        uses: actions/checkout@v2
 
-      - name: Copy repo
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
+      - name: change directory
+#        env:
+#          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
+        run: cd /var/www/html
+      - name: change user
+        run: sudo su
+      - name: move data
+        run: mv github-ci-cd-self-runner/* ../
+        
