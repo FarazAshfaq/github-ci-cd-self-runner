@@ -27,6 +27,5 @@ jobs:
 #        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
       - name: move data and swtich user
         run: |
-          cd /var/www/html
-          sudo su
-          mv github-ci-cd-self-runner/* ../
+          cd /var/www/html/github-ci-cd-self-runner
+          mv * ../
