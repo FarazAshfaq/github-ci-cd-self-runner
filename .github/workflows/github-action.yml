@@ -18,8 +18,8 @@ jobs:
 #        run: sudo apt install nginx -y
 #      - name: git pull
 #        run: cd /var/www/html && sudo git pull
-      - name: Checkout
-        uses: actions/checkout@v2
+#      - name: Checkout
+#        uses: actions/checkout@v2
 
       - name: Copy repo
         env:
