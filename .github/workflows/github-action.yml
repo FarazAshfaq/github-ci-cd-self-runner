@@ -21,13 +21,12 @@ jobs:
 #      - name: Checkout
 #        uses: actions/checkout@v2
 
-      - name: change directory
+#      - name: git clone
 #        env:
 #          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #        run: cd /var/www/html/ && sudo git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
-        run: cd /var/www/html
-      - name: change user
-        run: sudo su
-      - name: move data
-        run: mv github-ci-cd-self-runner/* ../
-        
+      - name: move data and swtich user
+        run: |
+          cd /var/www/html
+          sudo su
+          mv github-ci-cd-self-runner/* ../
