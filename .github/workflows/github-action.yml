@@ -18,11 +18,10 @@ jobs:
 #        run: sudo apt install nginx -y
 #      - name: git pull
 #        run: cd /var/www/html && sudo git pull
-      - name: 'Checkout'
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: 'Preparing blueprint-environment'
-        uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.PAT }}
-          repository: git@github.com/FarazAshfaq/github-ci-cd-self-runner.git
-          path: /var/www/html/
+
+      - name: Copy repo
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: git clone "https://"$ACCESS_TOKEN"@github.com/FarazAshfaq/github-ci-cd-self-runner.git"
